@@ -1,24 +1,13 @@
 doctype html
-html(lang='hu')
+html(lang='en')
   head
     include modules/head
-  body
+  body#store
     header
+      img#logo(src='app/images/logo.png', alt='logo')
       include modules/menu
-    main
-      section#landing
-        include sections/landing
-      hr
-      section#rolunk
-        include sections/about
-      hr
-      section#kapcsolat
-        include sections/contact
+    main#app
     footer
       include modules/footer
 
-    script(src='https://maps.googleapis.com/maps/api/js')
-    script
-      include ../assets/js/modules/map.js
-
-    script(src='assets/js/main.min.js')
+    script(src='app/js/main.js')
