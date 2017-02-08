@@ -1,0 +1,31 @@
+@import "3-1-STORE/filters"
+@import "3-1-STORE/products"
+@import "3-1-STORE/cart"
+
+#store
+  header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: fixed
+    top: 0
+    min-width: 100vw
+    height: 60px
+    background: $accent-color-1
+    z-index: 2
+    #mobile
+      position: static
+      padding: 0
+    #logo
+      max-width: 72px
+    #mobile, #logo
+      margin: 0
+      padding: 0 5vw
+  footer
+    margin-top: 64px
+
+@media (min-width: 1024px)
+  #app
+    >div
+      min-height: 100vh
+      display: flex

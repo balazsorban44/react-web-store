@@ -1,0 +1,61 @@
+const lang = {
+  "en": {
+    "search": "Search",
+    "searchPlaceholder": "Search here... 🔍",
+    "filterByCategory": "Filter by category",
+    "filterByPrice": "Filter by price",
+    "order": "Sort",
+    "priceIncrease": "Sort by price(increasing)",
+    "priceDecrease": "Sort by price(decreasing)",
+    "itemList": "Product list",
+    "found": "found",
+    "listView": "List view",
+    "gridView": "Grid view",
+    "cart": "Add to cart",
+    "cartItems": "In your cart",
+    "deleteCartItem": "Remove item from the cart",
+    "cartSum": "Total",
+    "finishAndPurchase": "Finish and pay",
+    "currency": "USD"
+  },
+  "hu": {
+      "search": "Keresés",
+      "searchPlaceholder": "A terméklista szűréséhez kezdjen gépelni... 🔍",
+      "filterByCategory": "Kategória szerinti szűrés",
+      "filterByPrice": "Ár szerinti szűrés",
+      "order": "Sorba rendezés",
+      "priceIncrease": "Ár szerinti növekvő",
+      "priceDecrease": "Ár szerinti csökkenő",
+      "itemList": "Terméklista",
+      "found": "találat",
+      "listView": "Lista nézet",
+      "gridView": "Rács nézet",
+      "cart": "Kosárba",
+      "cartItems": "A kosár tartalma",
+      "deleteCartItem": "Eltávolítás a kosárból",
+      "cartSum": "Végösszeg",
+      "finishAndPurchase": "Befejezés és vásárlás",
+      "currency": "Ft"
+  },
+  "no": {
+      "search": "Søk",
+      "searchPlaceholder": "Søk her... 🔍",
+      "filterByCategory": "Filtrer etter kategori",
+      "filterByPrice": "Filtrer etter pris",
+      "order": "Sortering",
+      "priceIncrease": "Sorter etter pris(stigende)",
+      "priceDecrease": "Sorter etter pris(synkende)",
+      "itemList": "Produktliste",
+      "found": "resultat",
+      "listView": "Vis i liste",
+      "gridView": "Vis i rutenett",
+      "cart": "Legg i handlekurv",
+      "cartItems": "I handlekurven",
+      "deleteCartItem": "Fjern fra handlekurven",
+      "cartSum": "Å betale",
+      "finishAndPurchase": "Ferdig og bestill",
+      "currency": "NOK"
+  }
+}
+
+module.exports = lang

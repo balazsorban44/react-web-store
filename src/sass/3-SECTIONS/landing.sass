@@ -1,0 +1,35 @@
+#landing
+  @extend .flex-column
+  align-items: center
+  padding: 0
+  background: $accent-color-1
+  box-shadow: 0 0 10px black
+  box-sizing: border-box
+  h5
+    font-style: italic
+    margin-bottom: 24px
+
+#logo
+  margin: 0 0 2.5vmin
+  max-height: 72px
+#carousel
+  box-shadow: 0 0 20px black
+  margin-bottom: -95px
+  max-width: 100vw
+  overflow: hidden
+#slider
+  display: flex
+  position: relative
+  animation: 15s slider 2s infinite alternate
+  img
+    width: 100%
+    height: 100%
+
+@media (min-width:360px)
+  #landing
+    padding: 5vw
+  #logo
+    max-height: 96px
+@media (min-width:412px)
+  #carousel
+    margin-bottom: -120px

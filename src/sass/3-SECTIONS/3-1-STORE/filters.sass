@@ -1,0 +1,175 @@
+#filters
+  margin-top: 60px
+  position: relative
+  display: flex
+  flex-direction: column
+  background: $accent-color-1
+  line-height: 1.5
+  border-bottom: 1px solid $light-color
+  padding-bottom: $base-font-size
+  h2
+    margin: 0 7.5vw
+    padding-top: 2.5vw
+  h3
+    font-size: $base-font-size
+    margin-left: 5vw
+
+#search-bar
+  margin: 0 5vw 5vw
+  padding: $base-font-size*.7
+  flex-grow: 1
+  border-radius: $base-font-size*2
+
+#category-filter
+  ul
+    display: flex
+    flex-wrap: wrap
+    margin: 0 2.5vw
+    li
+      margin: 4px
+      &:nth-of-type(odd)
+        margin: 4px
+      a
+        @include round-box(0)
+        font-size: $base-font-size*.8
+        text-decoration: none
+
+.active-category
+  background: $light-color !important
+  color: $accent-color-2
+  cursor: pointer
+  &::after
+    content: '✕'
+
+#price-filter
+  div
+    @include round-box()
+    display: flex
+    justify-content: center
+    input
+      padding: 0 2.5vw
+      flex-grow: 1
+    span
+      font-style: italic
+      font-weight: bold
+#order
+  margin: 5vw 0
+  display: flex
+  h3,select
+    padding: $base-font-size/4 $base-font-size/2
+  h3
+    padding-left: 0
+  select
+    @include round-box(0 0 0 2.5vw)
+    color: $light-color
+    &:focus
+      outline: none
+    option
+      background: $light-color
+      color: $accent-color-2
+
+#filters-toggle
+  @include round-box(0)
+  position: absolute
+  bottom: -$base-font-size*.75
+  min-width: 50%
+  align-self: center
+  display: flex
+  justify-content: center
+  padding: $base-font-size/1.5
+  background:
+    image: url(../images/icons/up.svg)
+    position: center
+    size: 36px
+    repeat: no-repeat
+  &:active
+    background-color: $accent-color-1
+.filters-hidden
+  display: none
+
+
+
+@media (min-width: 640px)
+  #filters
+    h2
+      margin-left: 5vw
+      padding: 0
+  #search-bar
+    margin-bottom: 0
+  #category-filter
+    margin-top: 2.5vw
+    ul
+      margin: 0 5vw
+  #price-filter
+    >div
+      margin: 0 5vw
+  #order
+    margin: 2.5vw 0 2.5vw
+
+@media (min-width: 768px)
+  #filters
+    h2
+      display: none
+  #search-bar
+    position: fixed
+    top: 60px
+    z-index: 3
+    height: 60px
+    margin: 0
+    width: 100vw
+    border-radius: 0
+    padding: 0 5vw
+    font-size: $base-font-size
+    border: none
+    box-shadow: 0 4px 4px rgba(0,0,0,.3)
+  #not-search
+    display: flex
+    flex-direction: column
+  #price-filter
+    font-size: $base-font-size*1.2
+    margin-top: 60px
+    order: -1
+    h3
+      display: none
+    >div
+      align-items: center
+      margin: 0
+      padding: 0 5vw
+      min-height: 60px
+      border-radius: 0
+      border: none
+
+@media (min-width: 1024px)
+  #filters
+    position: fixed
+    width: 20vw
+    min-height: calc(100vh - 60px)
+    box-shadow: 4px 0 4px rgba(0,0,0,.3)
+    h3
+      display: block
+      margin-left: 1.5vw
+  #search-bar
+    position: static
+    width: auto
+    max-height: 48px
+    z-index: 0
+  #category-filter
+    margin: 0
+    ul
+      margin: 1.5vw
+  #price-filter
+    font-size: $base-font-size
+    margin: 0
+    h3
+      display: none
+    >div
+      padding: 0 1vw
+      input
+        padding: 0 .5vw
+  #order
+    margin: 0
+    flex-direction: column
+    select
+      border: none
+      border-radius: 0
+      margin: 0

@@ -1,0 +1,109 @@
+.flex-column
+  display: flex
+  flex-direction: column
+
+@mixin box($margin:0, $padding:2.5vw)
+  @extend .flex-column
+  justify-content: space-between
+  background-color: $accent-color-1
+  border-right: $thick-border
+  line-height: 1.5
+  margin: $margin
+  padding: $padding
+
+@mixin round-box($margin:2.5vw, $border:$thin-border)
+  background: $accent-color-2
+  padding: $base-font-size/2
+  margin: $margin
+  border: $border
+  border-radius: $base-font-size*2
+
+.icon
+  margin-top: 4px
+  content: ''
+  background:
+    size: cover
+  position: absolute
+  width: 16px
+  height: 16px
+
+.hidden
+  visibility: hidden
+hr
+  border: none
+  border-top: $thin-border
+  max-width: 50%
+  margin: 5% 25%
+  &:first-of-type
+    margin-top: 120px
+
+
+input[type=range]
+  -webkit-appearance: none
+  margin: 10px 0
+  background: none
+  &:focus
+    outline: none
+  &::-webkit-slider-runnable-track
+
+    height: 4px
+    cursor: pointer
+    animate: 0.2s
+    background: $accent-color-1
+    border-radius: 0px
+  &::-webkit-slider-thumb
+    height: 28px
+    width: 24px
+    border-radius: 6px
+    background: $light-color
+    cursor: pointer
+    -webkit-appearance: none
+    margin-top: -12px
+  &:focus::-webkit-slider-runnable-track
+    background: $accent-color-1
+  &::-moz-range-track
+
+    height: 4px
+    cursor: pointer
+    animate: 0.2s
+    background: $accent-color-1
+    border-radius: 0px
+  &::-moz-range-thumb
+    border: none
+    height: 28px
+    width: 24px
+    border-radius: 6px
+    background: $light-color
+    cursor: pointer
+  &::-ms-track
+
+    height: 4px
+    cursor: pointer
+    animate: 0.2s
+    background: transparent
+    border-color: transparent
+    color: transparent
+  &::-ms-fill-lower, &::-ms-fill-upper
+    background: $accent-color-1
+    border-radius: 0px
+  &::-ms-thumb
+    border: none
+    height: 28px
+    width: 24px
+    border-radius: 6px
+    background: $light-color
+    cursor: pointer
+  &:focus
+    &::-ms-fill-lower, &::-ms-fill-upper
+      background: $accent-color-1
+
+
+
+
+@media (min-width:360px)
+  .box
+    margin: 5vw 5vw 0
+    padding: 5vw
+@media (min-width:1024px)
+  .box
+    margin: 0

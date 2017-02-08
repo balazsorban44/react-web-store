@@ -1,0 +1,59 @@
+@keyframes slideDown
+  0%
+    transform: translateY(-100%)
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+@keyframes slider
+  10%
+    left: 0vw
+  15%,35%
+    left: -100vw
+  40%,60%
+    left: -100*2vw
+  65%,85%
+    left: -100*3vw
+  90%,100%
+    left: -100*4vw
+
+@keyframes cartBtnIn
+  0%
+    opacity: 0
+    transform: scale(0) rotate(0)
+  90%
+    transform: scale(1.1) rotate(380deg)
+  100%
+    opacity: 1
+    transform: scale(1) rotate(360deg)
+
+@keyframes shake
+  10%
+    transform: rotate(20deg) scale(1.05)
+  20%
+    transform: rotate(-20deg) scale(1.10)
+  40%
+    transform: rotate(10deg) scale(.95)
+  60%
+    transform: rotate(-10deg)
+  80%
+    transform: rotate(5deg)
+
+@keyframes slideInRight
+  0%
+    opacity: 0
+    transform: scale(.9)
+    left: 100vw
+  40%
+    transform: scale(.9)
+    opacity: 1
+  100%
+    transform: scale(1)
+    left: 0
+
+@keyframes slideOutRight
+  0%
+    right: 0
+  100%
+    right: -100vw

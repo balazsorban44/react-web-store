@@ -1,0 +1,100 @@
+#kapcsolat
+  min-height: 100vh
+  justify-content: flex-end
+  @extend .flex-column
+  h2
+    align-self: flex-start
+
+#open
+  @include box()
+  h3
+    align-self: flex-start
+    margin: 2.5vw 0 0 $base-font-size
+    position: relative
+    &::before
+      @extend .icon
+      left: -18px
+      top: 3px
+      background-image: url('../images/icons/time.svg')
+    &::after
+      content: ':'
+  li
+    padding: .5vw
+    display: flex
+    justify-content: space-between
+    p
+      white-space: nowrap
+      &::after
+        content: ':'
+    span
+      white-space: nowrap
+      font-weight: bold
+
+#info
+  @include box()
+  p
+    display: none
+
+  a
+    white-space: nowrap
+    flex-grow: 1
+    padding-left: 20px
+  li
+    padding: .5vw 0
+    display: flex
+    align-items: center
+    &::before
+      @extend .icon
+    &:first-child::before
+      background-image: url('../images/icons/phone.svg')
+    &:nth-child(2)::before
+      background-image: url('../images/icons/mail.svg')
+    &:nth-child(3)::before
+      background-image: url('../images/icons/map.svg')
+
+
+#map
+  align-self: center
+  box-sizing: border-box
+  flex-grow: 1
+  min-height: 180px
+  min-width: calc(100% + 10vw)
+@media (min-width:360px)
+  #info
+  #open
+    h3
+      margin-top: 0
+
+  #map
+    border: 1px solid $light-color
+    min-width: 100%
+    margin: 2.5vw 5vw 0
+
+@media (min-width:768px)
+  #open
+    align-items: center
+    span
+      padding-left: 5px
+  #info
+    align-items: center
+    p
+      display: block
+      margin-left: 24px
+      &::after
+        content: ':'
+  #map
+    min-height: 360px
+
+@media (min-width:1024px)
+  #kapcsolat
+    position: relative
+    min-height: 0
+    flex-direction: row-reverse !important
+    justify-content: space-around
+    h2
+      left: 0
+      position: absolute
+    #open
+      align-self: center
+    #map
+      min-height: 200px
