@@ -68,7 +68,7 @@ export default class Products extends Component {
                 ></span>
               </div>
               <div className='item-content'>
-                <img className='item-img' src={`app/images/products/${product.cat}.jpg`} alt={product.name}/>
+                <img className='item-img' src={`dist/assets/images/products/${product.cat}.jpg`} alt={product.name}/>
                 <div>
                   <p className='item-desc'>{product.desc}</p>
                   <div className='item-price'>{product.price}{lang.en.currency}</div>
@@ -87,7 +87,7 @@ export default class Products extends Component {
                 </div>
               </div>
             </div>
-            <img className='item-bg' src={`app/images/products/${product.cat}.jpg`} alt='item bg'/>
+            <img className='item-bg' src={`dist/assets/images/products/${product.cat}.jpg`} alt='item bg'/>
           </article>)
       }
     })

@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import lang from '../database/lang.json'
 import Swipe from 'react-swipe'
 
-
 export default class Cart extends Component{
   toggleCart(){
     const cart = document.getElementById('cart-items').style
@@ -21,7 +20,7 @@ export default class Cart extends Component{
       return (
         <div id='cart-wrapper'>
           <div id='cart-button' onClick={this.toggleCart}>
-            <img src='app/images/icons/cart.svg'/>
+            <img src='dist/assets/images/icons/cart.svg'/>
           </div>
           <div id='cart-items'>
             <h2>{lang.en.cartItems}</h2>
@@ -67,7 +66,7 @@ class CartItems extends Component{
         cart = []
     Object.keys(shoppingCart).forEach((key) => {
       cart.push(
-          <Swipe
+          <Swipe key={key}
             className={`cart-item ${key}`}
             swipeOptions={{
               startSlide: 0,

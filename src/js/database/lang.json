@@ -1,4 +1,4 @@
-const lang = {
+{
   "en": {
     "search": "Search",
     "searchPlaceholder": "Search here... 🔍",
@@ -19,5 +19,3 @@ const lang = {
     "currency": "USD"
   }
 }
-
-module.exports = lang

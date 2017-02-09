@@ -7,11 +7,11 @@ export default class Filters extends React.Component {
     const filters = document.getElementById('not-search')
     if (!filters.classList.contains('filters-hidden')) {
       filters.classList.add('filters-hidden')
-      e.target.style.backgroundImage = 'url(app/images/icons/down.svg)'
+      e.target.style.backgroundImage = 'url(dist/assets/images/icons/down.svg)'
     }
     else {
       filters.classList.remove('filters-hidden')
-      e.target.style.backgroundImage = 'url(app/images/icons/up.svg)'
+      e.target.style.backgroundImage = 'url(dist/assets/images/icons/up.svg)'
     }
   }
 
