@@ -5,7 +5,7 @@ import Swipe from 'react-swipe'
 export default class Cart extends Component{
   toggleCart(){
     const cart = document.getElementById('cart-items').style
-    if (cart.animation == '' || cart.animation.includes('Out')) {
+    if (cart.animation === '' || cart.animation.includes('Out')) {
       cart.animation = 'slideInRight .4s forwards'
     } else{
       cart.animation = 'slideOutRight .4s forwards'
@@ -16,11 +16,11 @@ export default class Cart extends Component{
     let c = this.props.shoppingCart,
         sum = 0
     Object.keys(c).forEach((key) => sum+=(c[key].quantity*c[key].price))
-    if (Object.keys(c).length != 0) {
+    if (Object.keys(c).length !== 0) {
       return (
         <div id='cart-wrapper'>
           <div id='cart-button' onClick={this.toggleCart}>
-            <img src='assets/images/icons/cart.svg'/>
+            <img alt='toggle cart' src='static/images/icons/cart.svg'/>
           </div>
           <div id='cart-items'>
             <h2>{lang.en.cartItems}</h2>
@@ -79,7 +79,7 @@ class CartItems extends Component{
                 {`${shoppingCart[key].price} ${lang.en.currency}`}
               </div>
               <div className='cart-item-quantity'>
-                <button data-id={key} onClick={this.handleChangeQuantity}>{shoppingCart[key].quantity != 0 ? '-' : '×'}</button>
+                <button data-id={key} onClick={this.handleChangeQuantity}>{shoppingCart[key].quantity !== 0 ? '-' : '×'}</button>
                 <div className='cart-item-quantity-value'>{`${shoppingCart[key].quantity} ×`}</div>
                 <button data-id={key} onClick={this.handleChangeQuantity}>+</button>
               </div>

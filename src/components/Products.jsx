@@ -22,7 +22,7 @@ export default class Products extends Component {
       a.getAttribute('data-id'),
       a.getAttribute('data-name'),
       a.getAttribute('data-category'),
-      parseInt(a.getAttribute('data-price')),
+      parseInt(a.getAttribute('data-price'), 10),
       1
     )
     if (cartBtn != null) {
@@ -33,7 +33,7 @@ export default class Products extends Component {
 
   scaleUpItem(event){
     let e = event.currentTarget
-    if (e.style.transform == '') {
+    if (e.style.transform === '') {
       e.style.transform = 'rotate(180deg)'
     }
     else {
@@ -47,12 +47,12 @@ export default class Products extends Component {
           f = this.props.setFilters
     this.props.products.forEach((product) => {
       if (
-          ((f.searchValue.length == 0) ||
+          ((f.searchValue.length === 0) ||
           (product.name.concat(product.desc).toLowerCase().includes(f.searchValue.toLowerCase())))
         &&
           ((f.maxPrice === undefined) || (f.maxPrice >= product.price))
         &&
-          ((f.categories.includes(product.cat) || (f.categories.length == 0))
+          ((f.categories.includes(product.cat) || (f.categories.length === 0))
         ))
       {
         items.push(
@@ -68,7 +68,7 @@ export default class Products extends Component {
                 ></span>
               </div>
               <div className='item-content'>
-                <img className='item-img' src={`assets/images/products/${product.cat}.jpg`} alt={product.name}/>
+                <img className='item-img' src={`static/images/products/${product.cat}.jpg`} alt={product.name}/>
                 <div>
                   <p className='item-desc'>{product.desc}</p>
                   <div className='item-price'>{product.price}{lang.en.currency}</div>
@@ -87,7 +87,7 @@ export default class Products extends Component {
                 </div>
               </div>
             </div>
-            <img className='item-bg' src={`assets/images/products/${product.cat}.jpg`} alt='item bg'/>
+            <img className='item-bg' src={`static/images/products/${product.cat}.jpg`} alt='item bg'/>
           </article>)
       }
     })

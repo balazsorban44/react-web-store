@@ -4,10 +4,8 @@ html(lang='en')
     include modules/head
   body#store
     header
-      img#logo(src='dist/assets/images/logo.png', alt='logo')
+      img#logo(src='%PUBLIC_URL%/static/images/logo.png', alt='logo')
       include modules/menu
-    main#app
+    main#root
     footer
       include modules/footer
-
-    script(async src='dist/assets/js/bundle.js')

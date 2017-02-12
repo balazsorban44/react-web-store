@@ -1,0 +1,21 @@
+{
+  "en": {
+    "search": "Search",
+    "searchPlaceholder": "Search here... 🔍",
+    "filterByCategory": "Filter by category",
+    "filterByPrice": "Filter by price",
+    "order": "Sort",
+    "priceIncrease": "Sort by price(increasing)",
+    "priceDecrease": "Sort by price(decreasing)",
+    "itemList": "Product list",
+    "found": "found",
+    "listView": "List view",
+    "gridView": "Grid view",
+    "cart": "Add to cart",
+    "cartItems": "In your cart",
+    "deleteCartItem": "Remove item from the cart",
+    "cartSum": "Total",
+    "finishAndPurchase": "Finish and pay",
+    "currency": "USD"
+  }
+}

@@ -7,11 +7,11 @@ export default class Filters extends React.Component {
     const filters = document.getElementById('not-search')
     if (!filters.classList.contains('filters-hidden')) {
       filters.classList.add('filters-hidden')
-      e.target.style.backgroundImage = 'url(assets/images/icons/down.svg)'
+      e.target.style.backgroundImage = 'url(static/images/icons/down.svg)'
     }
     else {
       filters.classList.remove('filters-hidden')
-      e.target.style.backgroundImage = 'url(assets/images/icons/up.svg)'
+      e.target.style.backgroundImage = 'url(static/images/icons/up.svg)'
     }
   }
 
@@ -66,7 +66,9 @@ class CategoryFilter extends React.Component {
     let categories = this.state.filterCategoryList,
         el = e.target.innerHTML
 
-    this.state.active ? this.state.active='' : this.state.active='active'
+    this.setState({
+      active: this.state.active.length !== 0 ? '' : 'active'
+    })
     if (categories.includes(el)) {
       categories.splice(categories.indexOf(el),1)
     }
@@ -102,7 +104,10 @@ class PriceFilter extends React.Component {
     this.handleEvent = this.handleEvent.bind(this)
   }
   handleEvent(e){
-    let maxPrice = this.state.price = e.target.value
+    let maxPrice = e.target.value
+    this.setState({
+      price: maxPrice
+    })
     this.props.filters('maxPrice',maxPrice)
   }
 
@@ -134,7 +139,7 @@ class OrderItems extends React.Component {
     this.handleEvent = this.handleEvent.bind(this)
   }
   handleEvent(e){
-    this.props.filters('reversed',(e.target.value != 0) && true)
+    this.props.filters('reversed',(e.target.value !== 0) && true)
   }
   render() {
     return (
