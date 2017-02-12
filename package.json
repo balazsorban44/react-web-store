@@ -58,8 +58,12 @@
     "react-dom": "^15.4.2"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build-css": "node-sass src/sass/main.sass > src/main.css",
+    "watch-css": "npm run build-css & node-sass src/sass/main.sass > src/main.css --watch",
+    "build-html": "pug -o ./public/index.html ./src/pug/index.pug",
+    "watch-html": "npm run build-html && pug -o ./public/index.html ./src/pug/index.pug --watch",
+    "start": "node scripts/start.js & npm run watch-css",
+    "build": "npm run build-css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
