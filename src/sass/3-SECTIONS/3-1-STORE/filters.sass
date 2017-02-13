@@ -142,7 +142,7 @@
 @media (min-width: 1024px)
   #filters
     position: fixed
-    width: 20vw
+    width: 30vw
     min-height: calc(100vh - 60px)
     box-shadow: 4px 0 4px rgba(0,0,0,.3)
     h3
@@ -156,7 +156,9 @@
   #category-filter
     margin: 0
     ul
-      margin: 1.5vw
+      margin: 0 1.5vw 1.5vw
+    h3
+      padding: 2.5vw 2.5vw 0
   #price-filter
     font-size: $base-font-size
     margin: 0
@@ -168,8 +170,12 @@
         padding: 0 .5vw
   #order
     margin: 0
+    padding: 0 2.5vw
     flex-direction: column
     select
       border: none
       border-radius: 0
       margin: 0
+  footer
+    position: fixed
+    bottom: 0

@@ -438,7 +438,7 @@ footer a {
 @media (min-width: 1024px) {
   #filters {
     position: fixed;
-    width: 20vw;
+    width: 30vw;
     min-height: calc(100vh - 60px);
     box-shadow: 4px 0 4px rgba(0, 0, 0, 0.3); }
     #filters h3 {
@@ -452,7 +452,9 @@ footer a {
   #category-filter {
     margin: 0; }
     #category-filter ul {
-      margin: 1.5vw; }
+      margin: 0 1.5vw 1.5vw; }
+    #category-filter h3 {
+      padding: 2.5vw 2.5vw 0; }
   #price-filter {
     font-size: 16px;
     margin: 0; }
@@ -464,11 +466,15 @@ footer a {
         padding: 0 .5vw; }
   #order {
     margin: 0;
+    padding: 0 2.5vw;
     flex-direction: column; }
     #order select {
       border: none;
       border-radius: 0;
-      margin: 0; } }
+      margin: 0; }
+  footer {
+    position: fixed;
+    bottom: 0; } }
 
 #items h2 {
   display: inline-block;
@@ -723,7 +729,7 @@ footer a {
   .grid .item-bg {
     bottom: 0;
     right: 0;
-    display: block !important;
+    display: block;
     max-width: none;
     height: 100%; }
   .grid .item-content > div {
@@ -739,15 +745,28 @@ footer a {
     right: 0;
     width: 72vw; }
     #items > div {
-      margin-left: 4vw;
+      margin-left: 2.5vw;
       display: flex;
       flex-wrap: wrap; }
     #items h2 {
-      margin-top: 72px; }
+      margin: 96px 0 0 10vw; }
     #items article {
-      max-height: 12vw;
-      max-width: 12vw;
-      margin: .5vw; } }
+      height: 12vw;
+      width: 17vw;
+      margin: .5vw;
+      padding: .5vw; }
+    #items .item-title, #items .item-content {
+      margin: 0; }
+    #items .item-title h4 {
+      font-size: 16px; }
+    #items .item-img {
+      border: none;
+      height: 80px;
+      margin: 8px; }
+    #items .item-button {
+      min-width: 96px;
+      padding: 8px;
+      cursor: pointer; } }
 
 #cart-items {
   position: fixed;

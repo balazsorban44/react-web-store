@@ -173,7 +173,6 @@
       border-top: $thin-border
       border-radius: 0
 
-
 @media (min-width: 640px)
   #items
     h2
@@ -243,7 +242,7 @@
     .item-bg
       bottom: 0
       right: 0
-      display: block !important
+      display: block
       max-width: none
       height: 100%
     .item-content
@@ -259,12 +258,26 @@
     right: 0
     width: 72vw
     >div
-      margin-left: 4vw
+      margin-left: 2.5vw
       display: flex
       flex-wrap: wrap
     h2
-      margin-top: 72px
+      margin: 96px 0 0 10vw
     article
-      max-height: 12vw
-      max-width: 12vw
+      height: 12vw
+      width: 17vw
       margin: .5vw
+      padding: .5vw
+    .item-title, .item-content
+      margin: 0
+    .item-title
+      h4
+        font-size: $base-font-size
+    .item-img
+      border: none
+      height: 80px
+      margin: $base-font-size/2
+    .item-button
+      min-width: 96px
+      padding: $base-font-size/2
+      cursor: pointer
