@@ -766,7 +766,16 @@ footer a {
     #items .item-button {
       min-width: 96px;
       padding: 8px;
-      cursor: pointer; } }
+      cursor: pointer; }
+    #items .item-desc {
+      display: block;
+      max-height: 8vw;
+      overflow-y: hidden;
+      margin: 8px;
+      line-height: 1.2;
+      font-size: 14.4px; }
+    #items .item-price {
+      margin: 0 0 0 16px; } }
 
 #cart-items {
   position: fixed;
@@ -883,7 +892,16 @@ footer a {
 @media (min-width: 640px) {
   #cart-button {
     bottom: 4vw;
-    right: 4vw; } }
+    right: 4vw;
+    cursor: pointer; }
+  #cart-items {
+    padding: 0; }
+    #cart-items h2 {
+      padding: 8px; }
+  .cart-item {
+    padding: 0; }
+  .cart-item-details {
+    padding: 8px; } }
 
 #store header {
   display: flex;
