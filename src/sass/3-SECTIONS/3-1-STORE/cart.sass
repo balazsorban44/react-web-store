@@ -17,15 +17,25 @@
 .cart-item
   transition: .3s
   transform-origin: top
+  >div
+    display: flex
+    width: 200%
 .cart-item-details
-  @include box(0,2.5vw 5vw)
+  @include box(0,.3em .5em)
   flex-direction: row
   align-items: center
   border-bottom: 1px solid $accent-color-2
-  max-width: calc(100vw - 4px - 10vw)
+  max-width: 100vw
 .cart-item-quantity, .cart-item-remove
   display: flex
   align-items: center
+
+.cart-item-remove
+  align-items: stretch
+  display: flex
+  align-items: center
+  span,p
+    padding: .3em .5em
 
 .cart-item-quantity
   button
@@ -43,10 +53,8 @@
     font-size: $base-font-size
     font-weight: bold
 .cart-item-remove
-  min-height: 100%
   background: $accent-color-4
-  p,span
-    padding: 4vw 6vw
+
   span
     line-height: 1
     background: $accent-color-3
@@ -59,7 +67,7 @@
   display: flex
   justify-content: center
   background: $accent-color-1
-  padding: 7.5vw
+  padding: 1em
   min-height: $base-font-size
   font-weight: bold
 
@@ -67,7 +75,7 @@
 #cart-finish
   border: none
   align-self: flex-start
-  @include box(2.5vw,5vw)
+  @include box(1em)
   font-weight: bold
   font-size: $base-font-size*1.05
   color: $light-color
@@ -106,12 +114,23 @@
     bottom: 4vw
     right: 4vw
     cursor: pointer
-  #cart-items
-    padding: 0
-    h2
-      padding: $base-font-size/2
-  .cart-item
-    padding: 0
-  .cart-item-details
-    padding: $base-font-size/2
-  .cart-item-remove
+
+@media (min-width: 1024px)
+  #cart-items>div, #cart-finish
+    margin-left: 25vw
+    min-width: 50vw
+    max-width: 50vw
+  #cart-sum
+    padding: 1em 0
+  #cart-finish
+    min-width: 0
+    max-width: none
+  .cart-item-quantity
+    button
+      padding: 0
+  @media (min-width: 1280px)
+    .cart-item-details
+      max-width: calc(50vw - 3em)
+      min-width: calc(50vw - 3em)
+    #cart-finish
+      padding: 1em

@@ -87,8 +87,8 @@ class CartItems extends Component{
             <div
               className='cart-item-remove'
               data-id={key}
-              >
-              <span>×</span>
+            >
+              <span  data-id={key} onClick={this.handleDeleteItem}>×</span>
               <p>{lang.en.deleteCartItem}</p>
             </div>
           </Swipe>
