@@ -1,4 +1,7 @@
 # React Web Store
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/balazsorban44/react-web-store.svg)](https://greenkeeper.io/)
+
 This is a project to build a web store with React.js and other modern front-end developer tools for learning purposes.
 
 #### [LIVE DEMO](https://balazsorban44.github.io/react-web-store)
